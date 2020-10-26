@@ -1,4 +1,8 @@
+from datetime import time
+
 class BubbleSort:
+    
+    time_elapsed=0
     passes = 0
 
     def __init__(self,data,reverse=False):
