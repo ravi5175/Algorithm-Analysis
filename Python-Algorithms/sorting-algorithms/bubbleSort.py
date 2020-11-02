@@ -1,4 +1,4 @@
-from datetime import time
+import time
 
 class BubbleSort:
     
@@ -15,6 +15,7 @@ class BubbleSort:
     def bubbleSort(self,data,reverse):
         while(True):
             swap_count=0
+            start = time.time()
             for x in range(len(data)-1):
                 if reverse == False:
                     if data[x]>data[x+1]:
@@ -26,15 +27,19 @@ class BubbleSort:
                         swap_count += 1
             self.passes += 1
 
+
             if swap_count == 0:
+                self.time_elapsed=time.time()-start
                 break
+
         return data
 
 if __name__=='__main__':
     data=[2,6,3,1,5,8,9]
-    passes=BubbleSort(data).passes
-    print(data)
-    print(passes)
+    passes=BubbleSort(data)
+    print(passes.passes)
+    print(passes.time_elapsed)
+
     
             
 

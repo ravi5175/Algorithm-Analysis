@@ -26,8 +26,8 @@ class Test:
             self.call_test()
                 
     def call_test(self):
-        res = BubbleSort(self.sample_data).passes
-        self.export_metrics(res)
+        res = BubbleSort(self.sample_data)
+        self.export_metrics(res.passes)
 
 
 
